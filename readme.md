@@ -72,3 +72,4 @@ Feel free to change anything you want, and if you have any questions you can hit
 ### Attributions
 
 * Avatar icons by <a href="http://www.freepik.com/free-photos-vectors/people">Freepik</a>
+* Original coding challenge adapted from <a href="https://colony.io/">Colony</a>
