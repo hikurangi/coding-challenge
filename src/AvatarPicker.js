@@ -9,7 +9,7 @@ class AvatarPicker extends Component {
                 <div className="avatar">😎</div>
                 <div className="btn">Choose an avatar</div>
             </div>
-        )
+        );
     }
 }
 

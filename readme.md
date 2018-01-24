@@ -1,4 +1,4 @@
-## Colony frontend coding challenge
+## React frontend coding challenge
 
 You'll be building a simple react component: an avatar picker. It looks like this:
 
@@ -6,16 +6,14 @@ You'll be building a simple react component: an avatar picker. It looks like thi
 
 The user clicks on the avatar to open a popover which allows the user to choose another avatar from the list. After a click a (fake) HTTP request is made (while a loading spinner runs), the popover closes and the new avatar will appear in the initial view.
 
-### Design and behaviour:
+### Design and behavior:
 
 * The initially shown avatar is the first in the given list of avatars
 * The initial avatar which opens the popover has a border of 1px on hover and active state
 * The avatar icons are shown in groups of 4, aligned left (with 6 icons it will exactly look like it does in the gif)
-* The popover opens with a scaling animation that overbounces a bit (see gif; you're free to choose values for the animation that look good in your opinion, or close to what you see above)
 * The currently chosen avatar has a blue border of 3px
 * The avatar list icons have grey border and are overlaid by a blue colored area with an opacity of 20% on hover
 * The loading spinner should look like shown above. It is also blue.
-* The popover fades out with a scaling animation (no overbounce)
 * A click outside the popover area will result in the popover closing
 * Simulate a server request/response by showing the spinner for exactly one second before choosing the avatar
 * The popover is closed when an avatar is chosen
@@ -39,43 +37,36 @@ The user clicks on the avatar to open a popover which allows the user to choose 
   * padding: 14px
   * triangle: equilateral, 8px each side
 * "Choose your avatar" title
-  * font: 'Source Sans Pro' (use the google font)
   * color: rgb(249, 249, 249)
   * size: 16px
   * margin top and bottom: 14px
 
 ### Instructions:
 
-* This is going to be a react component which is being passed just one property: the list of available avatars. This list contains the src of the image file, the avatar label and a unique avatar id. The number of avatars can vary (let's say up to 12). For this example please use the following array:
+* This is going to be a react component which is being passed just one property: the list of available avatars. This list contains the src of the image file, the avatar label and a unique avatar id. The number of avatars can vary (let's say up to 12). For this example please use the initial avatars provided in the reducer.
 
+A basic react/redux app has been setup, it can be started via command line with `yarn start` and it will run on port 3000. There are some actions already provided to update the state in `src/actions` and a basic reducer with an initial state including a default avatar and the source for the other choices in `src/reducers`, since we're more interested in the UI itself than the tooling 😊.
 
-(you may adjust the paths to your needs of course)
+Feel free to change anything you want, and if you have any questions you can hit me up at sam.simmons@koordinates.com
 
 * Requested browser compatibility: IE11 and up, current versions of Chrome, FF, Safari
 * You may split up the main component in as many sub-components as you see fit
-* The whole component must also be fully usable when just using a keyboard
 * Think of it as a component that will end up in a large, scalable react app. Consider this when writing HTML and CSS as well.
 * You're free to use as many third party JS libraries that you see fit
-* You're NOT allowed to use any third party CSS libraries
-* You're free to use any build tools that you like (including CSS pre/post-processors). Do not focus on the tooling though. Choose tools that get you going quickly (when you're unsure, [create-react-app](https://github.com/facebookincubator/create-react-app/) might work well for you).
-* Only use the image assets given in this repository and do not modify the files in any way
-* Use proper semantics when writing HTML (for example: the avatar list has to be a `<ul>` and all the children just `<li>` elements)
 
 ### Lots of extra :gem:s if you provide
+* Extra care taken with accessibility
+* Tests 🎉
+* Nice animation when the menu opens/closes
 
-* A suite of unit tests written for this component using your favourite testing toolchain
 
 ### How to submit your results:
 
 * The results have to be shared as a git repository
 * You can either create a private repository on your favourite git hosting provider (github, gitlab, bitbucket) and then give access to
-  * chris@colony.io
-  * raul@colony.io
-* Or create a public repository and send the link to both of these email addresses
-* Or send the whole repository, zipped (including the `.git` directory) to both of these email addresses
-* Important note: please only submit your work when it is completely done!
-
-Happy coding! :heart:
+  * sam.simmons@koordinates.com
+* Or create a public repository and send the link to that email addresses
+* Or send the whole repository, zipped (including the `.git` directory) to that email address
 
 
 ### Attributions
