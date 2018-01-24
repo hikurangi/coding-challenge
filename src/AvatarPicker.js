@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { changeAvatar } from './actions';
 
 class AvatarPicker extends Component {
     render() {
@@ -12,4 +13,14 @@ class AvatarPicker extends Component {
     }
 }
 
-export default AvatarPicker;
+const mapStateToProps = state => state;
+
+const mapActionsToProps = (dispatch) => {
+    return {
+        selectAvatar: (avatar) => {
+            dispatch(changeAvatar(avatar));
+        }
+    };
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(AvatarPicker);
