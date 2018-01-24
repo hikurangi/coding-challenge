@@ -4,7 +4,7 @@ You'll be building a simple react component: an avatar picker. It looks like thi
 
 ![Pick an avatar](https://github.com/JoinColony/coding-challenge/raw/master/avatar_picker.gif "Pick me!")
 
-The user clicks on the avatar to open a popover which allows the user to choose another avatar from the list. After a click a (fake) HTTP request is made (while a loading spinner runs), the popover closes and the new avatar will appear in the inital view.
+The user clicks on the avatar to open a popover which allows the user to choose another avatar from the list. After a click a (fake) HTTP request is made (while a loading spinner runs), the popover closes and the new avatar will appear in the initial view.
 
 ### Design and behaviour:
 
