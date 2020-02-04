@@ -1,14 +1,19 @@
 import React                        from 'react'
 import { connect }                  from 'react-redux'
-import { changeAvatar, toggleMenu } from './actions'
+import {
+  changeAvatar,
+  closeMenu,
+  toggleMenu
+}                                   from './actions'
 import Popover                      from './Popover'
 
 const AvatarPicker = ({
   choices,
+  closeMenu,
   current,
   menuOpen,
-  toggleMenu,
-  selectAvatar
+  selectAvatar,
+  toggleMenu
   // ...props
 }) => {
   return (
@@ -23,6 +28,7 @@ const AvatarPicker = ({
         <Popover
           choices={choices}
           current={current}
+          closeMenu={closeMenu}
           selectAvatar={selectAvatar}
         />
       )}
@@ -34,7 +40,8 @@ const mapStateToProps = state => state
 
 const mapActionsToProps = dispatch => ({
   selectAvatar: avatar => dispatch(changeAvatar(avatar)),
-  toggleMenu: () => dispatch(toggleMenu())
+  toggleMenu: () => dispatch(toggleMenu()),
+  closeMenu: () => dispatch(closeMenu())
 })
 
 export default connect(mapStateToProps, mapActionsToProps)(AvatarPicker)

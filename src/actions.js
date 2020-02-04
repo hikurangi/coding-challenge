@@ -4,6 +4,12 @@ export const toggleMenu = () => {
     };
 };
 
+export const closeMenu = () => {
+    return {
+      type: "CLOSE_MENU"
+    };
+};
+
 export const updateAvatar = (payload) => {
     return {
         type: "CHANGE_AVATAR_SUCCESS",

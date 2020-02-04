@@ -72,6 +72,14 @@ export default function(state = initialState, action) {
         menuOpen: !state.menuOpen
       }
     }
+    // I think it nicer to define a separate action/reducer rather than
+    // add an optional param to TOGGLE_MENU
+    case 'CLOSE_MENU': {
+      return {
+        ...state,
+        menuOpen: false
+      }
+    }
     case 'CHANGE_AVATAR_REQUEST': {
       return {
         ...state,

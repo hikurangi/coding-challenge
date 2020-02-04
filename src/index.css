@@ -52,7 +52,7 @@ body {
     hence they end up being four-per-row when wrapped anyway
   */
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
