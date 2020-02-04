@@ -82,9 +82,12 @@ body {
 .popover .avatar {
   border: 3px solid transparent;
   position: relative;
-  margin: 0;
+  margin: 2px;
 }
 
+.avatar.active {
+  border: 3px solid rgb(122, 161, 178);
+}
 
 .popover .avatar:hover {
   /* it's a shame CSS variables are IE incompatible */
