@@ -1,21 +1,22 @@
 import React                        from 'react'
 import { connect }                  from 'react-redux'
-
 import { changeAvatar, toggleMenu } from './actions'
 import Popover                      from './Popover'
 
 const AvatarPicker = ({
+  current,
   menuOpen,
   toggleMenu,
   ...props
 }) => {
   return (
     <div>
-      <div
+      <img
         className="avatar"
         onClick={toggleMenu}
-      >
-      </div>
+        src={current.src}
+        alt={current.alt}
+      />
       {menuOpen && <Popover/>}
     </div>
   )
