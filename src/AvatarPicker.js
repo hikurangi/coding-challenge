@@ -4,10 +4,12 @@ import { changeAvatar, toggleMenu } from './actions'
 import Popover                      from './Popover'
 
 const AvatarPicker = ({
+  choices,
   current,
   menuOpen,
   toggleMenu,
-  ...props
+  selectAvatar
+  // ...props
 }) => {
   return (
     <div>
@@ -17,7 +19,13 @@ const AvatarPicker = ({
         src={current.src}
         alt={current.alt}
       />
-      {menuOpen && <Popover/>}
+      {menuOpen && (
+        <Popover
+          choices={choices}
+          current={current}
+          selectAvatar={selectAvatar}
+        />
+      )}
     </div>
   )
 }
